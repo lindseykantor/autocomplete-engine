@@ -2,4 +2,4 @@
 I built an autocomplete engine to explore different algorithmic approaches and their tradeoffs 
 - Implemented three aproaches: brute force, binary search, and prefix hash map
 - Compared their perfomance and memory tradeoffs
-- focused on data structures, efficency, and clean design
+- Focused on data structures, efficency, and clean design
