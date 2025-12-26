@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
-
+// Implements brute-force autocomplete by scanning all terms each query and using a priority queue to track the top k matches 
 public class BruteAutocomplete {
     private List<Term> terms; 
 
@@ -35,7 +35,7 @@ public class BruteAutocomplete {
         while(!pq.isEmpty()){
             top.add(pq.remove());  
         }
-        Collections.reverse(top);
+        Collections.reverse(top); // PriorityQueue removes the lowest-weight term first; reverse to return results in descending weight order
         return top;
     }
 }

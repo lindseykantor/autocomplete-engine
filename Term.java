@@ -11,5 +11,9 @@ public class Term {
         return weight;
     }
 
+    public String getWord(){
+        return word;
+    }
+
 
 }

@@ -9,10 +9,43 @@ public class Main {
         list.add(new Term("application",80));
         list.add(new Term("apricot", 60));
         list.add(new Term("banana", 90));
-        BruteAutocomplete obj = new BruteAutocomplete(list);
-        ArrayList<Term> matches =  new ArrayList<>(obj.topMatches("ap", 2));
-        System.out.println("Top matches:");
+        BruteAutocomplete bruteForceObj = new BruteAutocomplete(list);
+        ArrayList<Term> matches =  new ArrayList<>(bruteForceObj.topMatches("ap", 2));
+        System.out.println("Top matches from Brute:");
         for(Term match: matches){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        BinarySearchAutocomplete binarySearchObj = new BinarySearchAutocomplete(list);
+        ArrayList<Term> matches2 =  new ArrayList<>(binarySearchObj.topMatches("ap", 2));
+        System.out.println("BinaryAutoComplete Object");
+        ArrayList<Term> test1 =  new ArrayList<>(binarySearchObj.topMatches("zz", 2));
+        System.out.println("Top matches from Binary Search test 1 when no prefix is found:");
+        for(Term match: test1){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test2 =  new ArrayList<>(binarySearchObj.topMatches("ban", 5));
+        System.out.println("Top matches from Binary Search test 2 one match:");
+        for(Term match: test2){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test3 =  new ArrayList<>(binarySearchObj.topMatches("ap", 10));
+        System.out.println("Top matches from Binary Search test 3 where k is larger than matches:");
+        for(Term match: test3){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test4 =  new ArrayList<>(binarySearchObj.topMatches("ap", 2));
+        System.out.println("Top matches from Binary Search test 4 where k is smaller than matches:");
+        for(Term match: test4){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test5 =  new ArrayList<>(binarySearchObj.topMatches("apple", 5));
+        System.out.println("Top matches from Binary Search test 5 prefix logic with equality:");
+        for(Term match: test5){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test6 =  new ArrayList<>(binarySearchObj.topMatches("a", 10));
+        System.out.println("Top matches from Binary Search test 6:");
+        for(Term match: test6){
             System.out.printf("%s %d%n", match.word, match.weight);
         }
     }
