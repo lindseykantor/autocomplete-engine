@@ -76,6 +76,9 @@ public class BinarySearchAutocomplete {
 		return -1;
 	}
 public List<Term> topMatches(String prefix, int k) {
+    if(prefix == null){
+        throw new IllegalArgumentException("prefix cannot be null");
+    }
 		if (k < 0) {
 			throw new IllegalArgumentException("Illegal value of k:"+k);
 		}
