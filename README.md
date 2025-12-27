@@ -30,7 +30,7 @@ The program will output results from the brute-force, binary search, and hash-ba
   - **Cons:** Uses more memory due to the prefix map
  
 **Key Concepts Demonstrated:**
-- Algorthimic tradeoffs between time vs. space efficiency 
+- Algorithimic tradeoffs between time vs. space efficiency 
 - Use of arrays, hash maps, priority queues, and binary search 
 - Prefix-based searching and optimization strategies 
 - Defensive programing and input validation
