@@ -22,7 +22,7 @@ The program will output results from the brute-force, binary search, and hash-ba
   - **Time Complexity:** O(log N + M log k)
   - **Pros:** More efficent than Brute implementation, avoids scanning all terms
   - **Cons:** Still requires scanning all matching terms
-- Hash: Precomputes a map connecting every possible prefix to the set of words containing prefix sorted by weight. Each query accesses matches and returns top-k heaviest matches.
+3. Hash-Based Autocomplete: Precomputes a map connecting every possible prefix to the set of words containing prefix sorted by weight. Each query accesses matches and returns top-k heaviest matches.
   - **Time Complexity:**
     - Preprocessing: O(Max_Prefix * N)
     - Query: O(k) 
