@@ -48,5 +48,41 @@ public class Main {
         for(Term match: test6){
             System.out.printf("%s %d%n", match.word, match.weight);
         }
+        HashListAutocomplete hashListObj = new HashListAutocomplete(list);
+        ArrayList<Term> test7 =  new ArrayList<>(hashListObj.topMatches("zz", 2));
+        System.out.println("Top matches from HashList Autocomplete test 1 when no prefix is found:");
+        for(Term match: test7){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test8 =  new ArrayList<>(hashListObj.topMatches("ban", 5));
+        System.out.println("Top matches from HashList Autocomplete test 2 one match:");
+        for(Term match: test8){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test9 =  new ArrayList<>(hashListObj.topMatches("ap", 10));
+        System.out.println("Top matches from HashList Autocomplete test 3 where k is larger than matches:");
+        for(Term match: test9){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test10 =  new ArrayList<>(hashListObj.topMatches("ap", 2));
+        System.out.println("Top matches from HashList Autocomplete test 4 where k is smaller than matches:");
+        for(Term match: test10){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test13 =  new ArrayList<>(hashListObj.topMatches("ap", 2));
+        System.out.println("Top matches from HashList Autocomplete test 4 where k is smaller than matches:");
+        for(Term match: test13){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test11 =  new ArrayList<>(hashListObj.topMatches("apple", 5));
+        System.out.println("Top matches from HashList Autocomplete test 5 prefix logic with equality:");
+        for(Term match: test11){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
+        ArrayList<Term> test12 =  new ArrayList<>(hashListObj.topMatches("a", 10));
+        System.out.println("Top matches from hashList Autocomplete test 6:");
+        for(Term match: test12){
+            System.out.printf("%s %d%n", match.word, match.weight);
+        }
     }
 }
