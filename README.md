@@ -3,7 +3,7 @@ This project implements an autocomplete engine to explore different algorithmic 
 
 The project mirrors real-world systems such as search bars, code competion engines, and text prediction engines.
 
-Key variables: N total Terms, M # of matches for the prefix, k # top of results needed
+**Key Parameters:** N total Terms, M # of matches for the prefix, k # top of results needed
 
 **How to Run:** 
 1. Clone the repository: git clone https://github.com/lindseykantor/autocomplete-engine.git
@@ -28,7 +28,11 @@ The program will output results from the brute-force, binary search, and hash-ba
     - Query: O(k) 
   - **Pros:** Extremely fast lookup, ideal for real-time autocomplete
   - **Cons:** Uses more memory due to the prefix map
- 
+    
+ **Design Decisions:**
+- Prioritized runtime efficency vs. memory storage in hash-based approach to mimic real autocomplete systems
+- Used a priority queue to efficently return the top-k matches across all implementations
+  
 **Key Concepts Demonstrated:**
 - Algorithimic tradeoffs between time vs. space efficiency 
 - Use of arrays, hash maps, priority queues, and binary search 
