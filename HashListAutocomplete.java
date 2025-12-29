@@ -17,7 +17,7 @@ public class HashListAutocomplete {
         }
         for(Term term: terms){ //going through each term in terms
             String word = term.getWord();
-            for (int i = 0; i <= MAX_PREFIX && i <= word.length(); i++){ //going through each substring
+            for (int i = 0; i <= MAX_PREFIX && i <= word.length(); i++){ //going through each substring including empty string
                 String prefix = word.substring(0,i);
                 if(!myMap.containsKey(prefix)){
                     myMap.put(prefix,new ArrayList<>()); // if prefix hasn't been seen yet, create a new list

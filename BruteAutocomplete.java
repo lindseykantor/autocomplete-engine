@@ -5,22 +5,29 @@ import java.util.List;
 import java.util.PriorityQueue;
 // Implements brute-force autocomplete by scanning all terms each query and using a priority queue to track the top k matches 
 public class BruteAutocomplete {
-    private List<Term> terms; 
+    private List<Term> copy; 
 
     public BruteAutocomplete(List<Term> terms) {
-        this.terms = terms;
+        ArrayList<Term> copy = new ArrayList<>();
+        for(Term term: terms){
+            copy.add(term);
+        } 
+        this.copy = copy;
     }
     public List<Term> topMatches(String prefix, int k) {
+        if(prefix == null){
+        throw new IllegalArgumentException("prefix cannot be null");
+        }
         if(k<0){
             throw new IllegalArgumentException("Illegal value of k:"+k);
         }
         if(k == 0){
-            return new ArrayList<>();
+            return Collections.emptyList();
         }
         PriorityQueue<Term> pq = 
 				new PriorityQueue<>(Comparator.comparing(Term::getWeight));
-		for(Term t: terms){
-			if(!t.word.startsWith(prefix)){
+		for(Term t: copy){
+			if(!t.getWord().startsWith(prefix)){
 				continue;
 			}
 			if(pq.size() <k){

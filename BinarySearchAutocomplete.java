@@ -56,7 +56,7 @@ public class BinarySearchAutocomplete {
 		
 		// target in [low,high)
 		while (low+ 1 != high) { // stop when only one candiate remains only contains low
-        	int mid = (low + high)/2;
+        	int mid = (low + high + 1)/2;
        		T midval = list.get(mid);
         	int cmp = comp.compare(midval,target);
         	if (cmp <= 0){

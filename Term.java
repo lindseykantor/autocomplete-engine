@@ -1,6 +1,6 @@
 public class Term {
-    public String word; 
-    public int weight; 
+    private final String word; 
+    private final int weight; 
     
     public Term(String word, int weight){
         this.word = word; 

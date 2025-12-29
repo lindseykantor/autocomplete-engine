@@ -16,17 +16,17 @@ public class Demo {
         ArrayList<Term> matches =  new ArrayList<>(bruteForceObj.topMatches("ap", 2));
         System.out.println("Brute:");
         for(Term match: matches){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
         ArrayList<Term> test4 =  new ArrayList<>(binarySearchObj.topMatches("ap", 2));
         System.out.println("Binary:");
         for(Term match: test4){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
         ArrayList<Term> test10 =  new ArrayList<>(hashListObj.topMatches("ap", 2));
         System.out.println("Hash:");
         for(Term match: test10){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
 
         
@@ -34,12 +34,12 @@ public class Demo {
         ArrayList<Term> test1 =  new ArrayList<>(binarySearchObj.topMatches("zz", 2));
         System.out.println("Binary:");
         for(Term match: test1){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
         ArrayList<Term> test7 =  new ArrayList<>(hashListObj.topMatches("zz", 2));
         System.out.println("Hash:");
         for(Term match: test7){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
         
         System.out.println("Test 3: prefix with many matches");
@@ -47,12 +47,12 @@ public class Demo {
         ArrayList<Term> test3 =  new ArrayList<>(binarySearchObj.topMatches("ap", 10));
         System.out.println("Binary:");
         for(Term match: test3){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
         ArrayList<Term> test9 =  new ArrayList<>(hashListObj.topMatches("ap", 10));
         System.out.println("Hash:");
         for(Term match: test9){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
         
 
@@ -61,24 +61,24 @@ public class Demo {
         ArrayList<Term> test2 =  new ArrayList<>(binarySearchObj.topMatches("ban", 5));
         System.out.println("Binary:");
         for(Term match: test2){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
         ArrayList<Term> test8 =  new ArrayList<>(hashListObj.topMatches("ban", 5));
         System.out.println("Hash:");
         for(Term match: test8){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
         
         System.out.println("Test 5: empty prefix");
         ArrayList<Term> test13 =  new ArrayList<>(binarySearchObj.topMatches("", 2));
         System.out.println("Binary:");
         for(Term match: test13){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
         ArrayList<Term> test14 =  new ArrayList<>(hashListObj.topMatches("", 2));
         System.out.println("Hash:");
         for(Term match: test14){
-            System.out.printf("%s %d%n", match.word, match.weight);
+            System.out.printf("%s %d%n", match.getWord(), match.getWeight());
         }
         
     }
