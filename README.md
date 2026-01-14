@@ -13,7 +13,7 @@ The project mirrors real-world systems such as search bars, code competion engin
 The program will output results from the brute-force, binary search, and hash-based autocomplete implementations for comparison.
 
 **Implemented Approaches:**
-1. Brute Force: Scans all terms each and uses a priority queue to select the top k heaviest matches.
+1. Brute Force: Scans all terms each query and uses a priority queue to select the top k heaviest matches.
   - **Time Complexity:** O(N + M log k)
   - **Pros:** Simple and Easy to implement
   - **Cons:** Inefficent for large datasets
