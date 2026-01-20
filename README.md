@@ -1,7 +1,7 @@
 # Autocomplete Engine (Java)
 This project implements an autocomplete engine to explore different algorithmic approaches and their tradeoffs for efficently returning the top-k-heaviest-weighted terms that match a given prefix. It compares multiple strategies to highlight the tradeoffs between time complexity, memory usage, and preprocessing cost. 
 
-The project mirrors real-world systems such as search bars, code competion engines, and text prediction engines.
+The project mirrors real-world systems such as search bars, code completion engines, and text prediction engines.
 
 **Key Parameters:** N total Terms, M # of matches for the prefix, k # top of results needed
 
